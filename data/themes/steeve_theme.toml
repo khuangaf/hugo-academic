@@ -1,0 +1,18 @@
+# Theme metadata
+name = "steeve_theme"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#B22222"
+
+# Menu
+menu_primary = "#961d1d"
+menu_text = "#000"
+menu_text_active = "#fae141"
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"
