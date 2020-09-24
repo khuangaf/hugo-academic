@@ -24,8 +24,6 @@
 {{ $summary := "" }}
 {{ if $item.Params.summary }}
   {{ $summary = $item.Params.summary | markdownify | emojify }}
-{{ else if .Params.abstract }}
-  {{ $summary = .Params.abstract | markdownify | emojify }}
 {{ else if $item.Truncated }}
   {{ $summary = $item.Summary }}
 {{ end }}
@@ -33,9 +31,10 @@
 <div class="media stream-item">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0">
-      <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
-    </h3>
+    <h6 class="article-title mb-0 mt-0">
+      <!-- <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a> -->
+      {{$item.Title}}
+    </h6>
 
     {{ with $summary }}
     <div class="article-style">
@@ -44,7 +43,7 @@
     {{ end }}
 
     <div class="stream-meta article-metadata">
-
+      {{ $item.Params.publication_short | markdownify}}
       {{ if eq $item.Type "talk" }}
       <div>
         <span>
@@ -58,6 +57,7 @@
       {{ end }}
 
       {{ if and $show_authors_only $item.Params.authors }}
+      
       <div>
         {{ partial "page_metadata_authors" $item }}
       </div>
