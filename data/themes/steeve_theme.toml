@@ -5,13 +5,13 @@ name = "steeve_theme"
 light = true
 
 # Primary
-primary = "#B22222"
+primary = "#000099"
 
 # Menu
-menu_primary = "#990000"
-menu_text = "#fff"
-menu_text_active = "#fae141"
-menu_title = "#fff"
+menu_primary = "#0f2040"
+menu_text = "#000099"
+menu_text_active = "#d66138"
+menu_title = "#d66138"
 
 # Home sections
 home_section_odd = "rgb(255, 255, 255)"
